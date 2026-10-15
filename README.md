@@ -4,8 +4,7 @@
 [![ci](https://github.com/Dannesk/dannesk-noise-protocol/actions/workflows/ci.yml/badge.svg)](https://github.com/Dannesk/dannesk-noise-protocol/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-3B3F43)](LICENSE)
 
-The [Noise Protocol Framework](https://noiseprotocol.org/noise.html)'s NK handshake for one
-suite, `Noise_NK_25519_AESGCM_SHA256`, written from the specification on
+The [Noise Protocol Framework](https://noiseprotocol.org/noise.html)'s NK handshake, `Noise_NK_25519_AESGCM_SHA256`, written from the specification on
 RustCrypto and dalek primitives. It is the encrypted socket between the
 [Dannesk](https://github.com/Dannesk/app) wallet and its server.
 
