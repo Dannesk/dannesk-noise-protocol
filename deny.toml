@@ -1,0 +1,26 @@
+
+[graph]
+
+all-features = true
+
+[advisories]
+unmaintained = "all"
+unsound = "all"
+yanked = "deny"
+
+[licenses]
+
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "BSD-3-Clause",  # curve25519-dalek, x25519-dalek and subtle
+    "Unicode-3.0",   # unicode-ident, in the proc-macro crates that build curve25519-dalek and tokio's test macros
+]
+
+[bans]
+multiple-versions = "allow"
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
