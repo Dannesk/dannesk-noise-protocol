@@ -1,0 +1,29 @@
+[package]
+name = "dannesk-noise-protocol"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+license = "MIT"
+description = "Noise NK handshake over X25519, AES-256-GCM and SHA-256."
+repository = "https://github.com/Dannesk/dannesk-noise-protocol"
+keywords = ["noise", "noise-protocol", "handshake", "x25519", "encryption"]
+categories = ["cryptography", "network-programming"]
+publish = false  
+
+[dependencies]
+
+x25519-dalek = { version = "3.0.0", features = ["static_secrets", "getrandom"] }
+aes-gcm = { version = "0.11.1", default-features = false, features = ["aes", "alloc", "zeroize"] }
+sha2 = "0.11.0"
+hmac = "0.13.0"
+zeroize = "1.9"
+tokio = { version = "1.53.2", features = ["io-util"], optional = true }
+
+[features]
+
+tokio = ["dep:tokio"]
+
+[dev-dependencies]
+hex = "0.4.3"
+serde_json = "1.0.151"
+tokio = { version = "1.53.2", features = ["io-util", "rt", "macros"] }
